@@ -15,4 +15,4 @@ while True:
         print(1)
     else:
         n2 = n * 2
-        isPrime(n2,n)
+        isPrime(n2,n) 
