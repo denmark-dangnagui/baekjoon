@@ -1,12 +1,12 @@
 def ask(n,cnt):
     if n < 1:
         print('____' * cnt,end='')
-        print('"재귀함수는 뭔가요?"')
+        print('"재귀함수가 뭔가요?"')
         print('____' * cnt,end='')
         print('"재귀함수는 자기 자신을 호출하는 함수라네"')
         print('____' * cnt,end='')
         print('라고 답변하였지.')
-
+        return
     else:
         print('____' * cnt,end='')
         print('"재귀함수가 뭔가요?"')
