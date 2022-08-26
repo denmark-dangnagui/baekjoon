@@ -1,8 +1,9 @@
-a = int(input())
-if a == 0:
-    print(1)
-else:
-    total = 1
-    for i in range(1,a+1):
-        total *= i
-    print(total)
+import sys
+def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+n = int(sys.stdin.readline())
+print(factorial(n))
