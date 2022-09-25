@@ -1,9 +1,10 @@
 import sys
 
 n = int(sys.stdin.readline())
-
 for i in range(n):
-    s = sys.stdin.readline().split()
-    for j in s:
+    sentence = sys.stdin.readline().split()
+    print(sentence)
+    for j in sentence:
         print(j[::-1],end=' ')
     print()
+
