@@ -1,39 +1,21 @@
 import sys
 
-l = []
-s = sys.stdin.readline()
-for i in s:
-    if i != '\n':
-        l.append(i)
+word = list(sys.stdin.readline())
 n = int(sys.stdin.readline())
-s_len = len(l)
+cursor = len(word)-1
 for i in range(n):
-    o = sys.stdin.readline().split()
-    if o[0] == 'P':
-        # print('len',s_len)
-        l.insert(s_len, o[1])
-        s_len += 1
-        # print(l)
-    elif o[0] == 'L':
-        # print(s_len)
-        if s_len > 0:
-            s_len -= 1
-            # print(1)
-        else:
-            s_len = 0
-            # print(2)
-    elif o[0] == 'D':
-        # print('len',s_len)
-        if s_len != len(s):
-            s_len += 1
-        else:
-            s_len =len(s)
-    elif o[0] == 'B':
-        # print('len',s_len)
-        if s_len != 0:
-            del l[s_len-1]
-            if s_len != 0:
-                s_len -= 1
-        # print(l)
-for i in l:
-    print(i,end='')
+    order = list(sys.stdin.readline())
+    if order[0] == 'P':
+        word.insert(cursor,order[2])
+        cursor += 1
+    elif order[0] == 'L':
+        if cursor != 0:
+            cursor -= 1
+    elif order[0] == 'D':
+        if cursor != len(word) - 1:
+            cursor += 1
+    elif order[0] == 'B':
+        if cursor != 0:
+            del word[cursor - 1]
+            cursor -= 1
+print(''.join(word))
