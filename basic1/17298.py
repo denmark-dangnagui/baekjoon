@@ -1,3 +1,4 @@
+import math
 import sys
 from collections import deque
 n = int(input())
@@ -9,3 +10,5 @@ for i in range(1,n):
         stack[temp.pop()] = numbers[i]
     temp.append(i)
 print(*stack)
+a = math.pi
+print(a)
